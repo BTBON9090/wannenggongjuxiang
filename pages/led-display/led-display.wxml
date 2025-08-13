@@ -1,0 +1,10 @@
+<view class="fullscreen-container {{isLandscape ? 'landscape' : ''}}">
+  <!-- animation样式现在由JS动态生成 -->
+  <view class="marquee-parent" style="animation: seamless-scroll {{speed}}s linear infinite;">
+    <view wx:for="{{textList}}" wx:key="index" 
+          class="text-instance"
+          style="{{textInstanceStyle}}">
+      {{item}}
+    </view>
+  </view>
+</view>

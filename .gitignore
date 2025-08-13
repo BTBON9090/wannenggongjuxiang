@@ -1,0 +1,11 @@
+# WeChat Mini Program specific
+project.private.config.json
+
+# Dependencies
+/node_modules
+
+# Build output
+/dist
+
+# macOS
+.DS_Store

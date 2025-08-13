@@ -1,0 +1,34 @@
+<view class="container">
+  <view class="header">
+    <image class="logo" src="/static/images/doraemon_icon.png" mode="aspectFit"></image>
+    <view class="title">哆啦A梦的裤兜</view>
+    <view class="subtitle">一个万能的口袋工具箱</view>
+  </view>
+
+  <view class="grid">
+    <!-- 工具1：LED字幕 -->
+    <view class="grid-item" bindtap="navigateToTool" data-url="/pages/led-setting/led-setting">
+      <view class="icon-wrapper bg-blue">
+        <text class="icon-text">字</text>
+      </view>
+      <view class="tool-name">LED手机字幕</view>
+    </view>
+
+    <!-- 工具2：指南针 -->
+    <view class="grid-item" bindtap="navigateToTool" data-url="/pages/compass/compass">
+      <view class="icon-wrapper bg-green">
+        <text class="icon-text">北</text>
+      </view>
+      <view class="tool-name">指南针</view>
+    </view>
+
+    <!-- 工具3：刻度尺 -->
+    <view class="grid-item" bindtap="navigateToTool" data-url="/pages/ruler/ruler">
+      <view class="icon-wrapper bg-orange">
+        <text class="icon-text">尺</text>
+      </view>
+      <view class="tool-name">刻度尺</view>
+    </view>
+
+  </view>
+</view>

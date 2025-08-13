@@ -1,0 +1,31 @@
+<view class="container">
+  <!-- 指南针 -->
+  <view class="compass-container">
+    <image class="compass-dial" src="/static/images/compass_dial.png"></image>
+    <!-- 指针的旋转现在由 animation 属性控制 -->
+    <image class="compass-pointer" src="/static/images/compass_pointer.png" animation="{{animationData}}"></image>
+  </view>
+
+  <!-- 主要方向读数 -->
+  <view class="direction-text">{{direction_text}}</view>
+
+  <!-- 其他地理信息 -->
+  <view class="geo-info-grid">
+    <view class="info-item">
+      <view class="info-value">{{longitude}}</view>
+      <view class="info-label">经度</view>
+    </view>
+    <view class="info-item">
+      <view class="info-value">{{latitude}}</view>
+      <view class="info-label">纬度</view>
+    </view>
+    <view class="info-item">
+      <view class="info-value">{{altitude}}</view>
+      <view class="info-label">海拔(m)</view>
+    </view>
+  </view>
+
+  <!-- 新增的按钮 -->
+  <button class="location-btn" bindtap="onGetLocationTap">获取当前位置</button>
+
+</view>

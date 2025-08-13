@@ -1,0 +1,76 @@
+/* pages/led-setting/led-setting.wxss */
+.container {
+  padding: 40rpx;
+}
+
+.title {
+  font-size: 48rpx;
+  font-weight: bold;
+  margin-bottom: 40rpx;
+  text-align: center;
+}
+
+.input-area {
+  width: 100%;
+  height: 200rpx;
+  border: 1px solid #ddd;
+  border-radius: 10rpx;
+  padding: 20rpx;
+  box-sizing: border-box;
+  margin-bottom: 40rpx;
+}
+
+.settings-panel {
+  width: 100%;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  padding: 20rpx 0;
+  margin-bottom: 60rpx;
+}
+
+.setting-item {
+  display: flex;
+  align-items: center;
+  margin: 40rpx 0;
+}
+
+.switch-item {
+  justify-content: space-between;
+}
+
+.label {
+  font-size: 30rpx;
+  color: #333;
+  margin-right: 20rpx;
+}
+
+.slider {
+  flex-grow: 1;
+}
+
+.color-selector {
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.color-swatches {
+  display: flex;
+  margin-top: 20rpx;
+}
+
+.color-swatch {
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 50%;
+  margin-right: 30rpx;
+  border: 6rpx solid #fff;
+  box-shadow: 0 0 10rpx rgba(0,0,0,0.1);
+}
+
+.color-swatch.selected {
+  border-color: #008cff;
+}
+
+.generate-btn {
+  width: 100%;
+}

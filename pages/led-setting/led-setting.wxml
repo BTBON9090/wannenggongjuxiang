@@ -1,0 +1,56 @@
+<view class="container">
+  <view class="title">LED 字幕设置</view>
+  
+  <textarea class="input-area" placeholder="请在这里输入你想滚动显示的文字..." bindinput="onTextInput" value="{{textToShow}}"></textarea>
+
+  <view class="settings-panel">
+    <!-- 字体大小 -->
+    <view class="setting-item">
+      <view class="label">字体大小</view>
+      <slider class="slider" min="50" max="600" value="480" step="1" bindchange="onSliderChange" data-field="fontSize" show-value></slider>
+    </view>
+
+    <!-- 滚动速度 -->
+    <view class="setting-item">
+      <view class="label">滚动速度 (秒/圈)</view>
+      <slider class="slider" min="0.25" max="30" value="3" step="0.25" bindchange="onSliderChange" data-field="speed" show-value></slider>
+    </view>
+
+    <!-- 字幕间距 -->
+    <view class="setting-item">
+      <view class="label">字幕间距</view>
+      <slider class="slider" min="0" max="500" value="200" step="10" bindchange="onSliderChange" data-field="gap" show-value></slider>
+    </view>
+
+    <!-- 闪烁频率 -->
+    <view class="setting-item">
+      <view class="label">闪烁速度 (秒/轮)</view>
+      <slider class="slider" min="0.5" max="10" value="3" step="0.5" bindchange="onSliderChange" data-field="flashSpeed" show-value></slider>
+    </view>
+
+    <!-- 字体颜色 -->
+    <view class="setting-item color-selector">
+      <view class="label">字体颜色</view>
+      <view class="color-swatches">
+        <view wx:for="{{colorOptions}}" wx:key="index" 
+              class="color-swatch {{item.value === textColor ? 'selected' : ''}}" 
+              style="background-color: {{item.value}}" 
+              bindtap="onColorSelect" 
+              data-color="{{item.value}}">
+        </view>
+      </view>
+    </view>
+
+    <!-- 功能开关 -->
+    <view class="setting-item switch-item">
+      <view class="label">横屏模式</view>
+      <switch bindchange="onSwitchChange" data-field="isLandscape"></switch>
+    </view>
+    <view class="setting-item switch-item">
+      <view class="label">五彩闪烁</view>
+      <switch bindchange="onSwitchChange" data-field="isColorful"></switch>
+    </view>
+  </view>
+
+  <button class="generate-btn" type="primary" bindtap="onGenerate">生成滚动字幕</button>
+</view>
