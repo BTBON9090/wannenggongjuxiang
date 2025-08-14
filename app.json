@@ -4,7 +4,9 @@
     "pages/led-setting/led-setting",
     "pages/led-display/led-display",
     "pages/compass/compass",
-    "pages/ruler/ruler"
+    "pages/ruler/ruler",
+    "pages/ruler-setting/ruler-setting",
+    "pages/protractor/protractor"
   ],
   "window": {
     "backgroundTextStyle": "light",

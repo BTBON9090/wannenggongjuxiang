@@ -1,0 +1,19 @@
+<view class="container">
+  <!-- 新增一层容器，用于实现顶部对齐 -->
+  <view class="resizable-box-container">
+    <view class="resizable-box" style="height: {{boxHeight}}px;">
+      <view class="instructions">
+        <view>请将银行卡竖向放置</view>
+        <view class="instructions-sub">拖动下方手柄，使底边与卡片对齐</view>
+      </view>
+      <view class="handle-dragger" bindtouchstart="onTouchStart" bindtouchmove="onTouchMove">
+        <view class="handle-visual"></view>
+      </view>
+    </view>
+  </view>
+
+  <view class="button-group">
+    <button class="save-btn" bindtap="onSaveCalibration">保存校准</button>
+    <button class="cancel-btn" bindtap="onCancel">取消</button>
+  </view>
+</view>

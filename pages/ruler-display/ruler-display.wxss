@@ -1,0 +1,27 @@
+/* pages/ruler-display/ruler-display.wxss */
+page {
+  /* 强制页面横屏 */
+  page-orientation: landscape;
+  background-color: #f4f5f7;
+  width: 100vh;
+  height: 100vw;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.ruler-top, .ruler-bottom {
+  width: 100%;
+  height: 150rpx; /* 尺子的高度 */
+  background-color: white;
+}
+
+.ruler-bottom canvas {
+  /* 将底部canvas翻转180度，与顶部对称 */
+  transform: rotate(180deg);
+}

@@ -30,5 +30,13 @@
       <view class="tool-name">刻度尺</view>
     </view>
 
+    <!-- 工具4：量角器 -->
+    <view class="grid-item" bindtap="navigateToTool" data-url="/pages/protractor/protractor">
+      <view class="icon-wrapper bg-purple">
+        <text class="icon-text">角</text>
+      </view>
+      <view class="tool-name">量角器</view>
+    </view>
+
   </view>
 </view>

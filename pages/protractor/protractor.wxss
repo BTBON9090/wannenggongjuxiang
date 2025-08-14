@@ -1,0 +1,39 @@
+/* pages/protractor/protractor.wxss */
+page { height: 100%; background-color: #f0f2f5; overflow: hidden; }
+.container { display: flex; flex-direction: column; height: 100%; position: relative; }
+
+.readout-display {
+  position: absolute;
+  top: 40rpx;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 50rpx; /* 按要求修改字号 */
+  font-weight: 500; /* 适当减细 */
+  color: #555;
+  z-index: 10;
+}
+
+.canvas-wrapper { height: 100%; width: 100%; }
+
+.slider-control-area {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 120rpx;
+  width: 100%;
+  padding: 0 60rpx;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  background-color: rgba(240, 242, 245, 0.8);
+  z-index: 10;
+}
+
+.slider-track { width: 100%; height: 4rpx; background-color: #ccc; position: relative; }
+.track-label-left, .track-label-right { position: absolute; top: 20rpx; font-size: 24rpx; color: #999; }
+.track-label-left { left: 0; }
+.track-label-right { right: 0; }
+
+.slider-movable-area { position: absolute; top: 50%; left: 60rpx; transform: translateY(-50%); width: calc(100% - 120rpx); height: 100%; }
+.slider-thumb { width: 60rpx; height: 60rpx; background-color: #008cff; border-radius: 50%; border: 4rpx solid white; box-shadow: 0 0 10rpx rgba(0,0,0,0.2); }

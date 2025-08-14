@@ -1,18 +1,41 @@
 /* pages/ruler/ruler.wxss */
-.container {
-  padding: 20rpx;
+page { height: 100%; overflow: hidden; }
+.container { height: 100%; position: relative; }
+
+.ruler-vertical { position: absolute; left: 0; top: 0; width: 150rpx; height: 100%; background-color: #fff; border-right: 1px solid #eee; }
+.readout-area { position: absolute; top: 25%; left: 50%; transform: translateX(-50%); text-align: center; color: #333; }
+.readout-value { font-size: 100rpx; font-weight: bold; line-height: 1; }
+.unit { font-size: 40rpx; font-weight: normal; margin-left: 10rpx; }
+.readout-value-sub { font-size: 40rpx; color: #999; margin-top: 10rpx; }
+.readout-value-extra { font-size: 32rpx; color: #666; margin-top: 15rpx; }
+
+.movable-area { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+.movable-pointer { width: 100%; height: 60rpx; display: flex; align-items: center; }
+.pointer-line { width: 100%; height: 2rpx; background-color: #e74c3c; }
+.pointer-handle { position: absolute; left: 110rpx; top: 50%; transform: translateY(-50%); width: 40rpx; height: 40rpx; background-color: #e74c3c; border-radius: 50%; }
+
+.settings-btn { position: absolute; top: 40rpx; right: 40rpx; width: 80rpx; height: 80rpx; display: flex; justify-content: center; align-items: center; font-size: 50rpx; background-color: rgba(0, 0, 0, 0.1); border-radius: 50%; }
+
+.unit-switcher {
+  position: absolute;
+  bottom: 40rpx;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 40rpx;
+  padding: 10rpx;
 }
 
-.ruler-wrapper {
-  width: 100%;
-  height: 300rpx; /* 尺子的高度 */
-  border: 1px solid #ccc;
-  box-sizing: border-box;
+.unit-btn {
+  font-size: 28rpx;
+  padding: 10rpx 30rpx;
+  color: #333;
+  border-radius: 30rpx;
 }
 
-.tip {
-  margin-top: 40rpx;
-  text-align: center;
-  font-size: 24rpx;
-  color: #999;
+.unit-btn.active {
+  background-color: #fff;
+  color: #008cff;
+  font-weight: bold;
 }

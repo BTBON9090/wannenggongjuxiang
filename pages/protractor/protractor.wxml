@@ -1,0 +1,22 @@
+<view class="container">
+  <view class="readout-display">
+    <!-- 修复：直接绑定格式化好的字符串 -->
+    <text>{{angle_str}}°</text>
+  </view>
+  <view class="canvas-wrapper">
+    <canvas type="2d" id="protractor-canvas" 
+            style="width: 100%; height: 100%;">
+    </canvas>
+  </view>
+
+  <view class="slider-control-area">
+    <view class="slider-track">
+      <view class="track-label-left">0°</view>
+      <view class="track-label-right">180°</view>
+    </view>
+    <movable-area class="slider-movable-area">
+      <movable-view class="slider-thumb" direction="horizontal" x="{{slider_x}}" bindchange="onSliderMove">
+      </movable-view>
+    </movable-area>
+  </view>
+</view>

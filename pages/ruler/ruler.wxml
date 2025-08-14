@@ -1,6 +1,28 @@
 <view class="container">
-  <view class="ruler-wrapper">
+  <view class="ruler-vertical">
     <canvas type="2d" id="ruler-canvas" style="width: 100%; height: 100%;"></canvas>
   </view>
-  <view class="tip">* 读数可能存在轻微误差，仅供参考</view>
+
+  <view class="readout-area">
+    <view class="readout-value">{{measurement.cm_str}} <text class="unit">cm</text></view>
+    <view class="readout-value-sub">{{measurement.mm_str}} mm</view>
+    <view class="readout-value-extra">{{measurement.shicun_str}} 市寸</view>
+    <view class="readout-value-extra">{{measurement.inch_str}} 英寸</view>
+  </view>
+
+  <movable-area class="movable-area">
+    <movable-view class="movable-pointer" direction="vertical" y="{{pointer_y}}" bindchange="onPointerMove">
+      <view class="pointer-line"></view>
+      <view class="pointer-handle"></view>
+    </movable-view>
+  </movable-area>
+
+  <view class="settings-btn" bindtap="onCalibrateTap">⚙</view>
+
+  <!-- 单位切换按钮 -->
+  <view class="unit-switcher">
+    <view class="unit-btn {{activeUnit === 'cm' ? 'active' : ''}}" bindtap="onUnitSwitch" data-unit="cm">厘米</view>
+    <view class="unit-btn {{activeUnit === 'shicun' ? 'active' : ''}}" bindtap="onUnitSwitch" data-unit="shicun">市寸</view>
+    <view class="unit-btn {{activeUnit === 'inch' ? 'active' : ''}}" bindtap="onUnitSwitch" data-unit="inch">英寸</view>
+  </view>
 </view>
